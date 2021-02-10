@@ -1,3 +1,7 @@
 {
-  "powermode.enabled": true
+  "powermode.enabled": true,
+  "editor.lineNumbers": "off",
+  "editor.lineDecorationsWidth": 3,
+  "editor.glyphMargin": false,
+  "editor.folding": false
 }
