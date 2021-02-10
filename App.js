@@ -1,5 +1,6 @@
-import { StatusBar } from "expo-status-bar";
-import React, { cloneElement, useState } from "react";
+import React from "react";
+import styles from "./landingPageStyles";
+import wallpapers, { leavesWithMoreBlack } from "./landingPageWallpapers";
 import {
   StyleSheet,
   Text,
@@ -9,13 +10,15 @@ import {
   ImageBackground,
   Image,
   Alert,
+  StatusBar,
 } from "react-native";
-
-const images = [require("./images/leavesBackground.jpg")];
 
 export default function App() {
   return (
-    <ImageBackground source={images[0]} style={styles.backgroundImage}>
+    <ImageBackground
+      source={wallpapers.leavesWithMoreBlack}
+      style={styles.backgroundImage}
+    >
       <View style={styles.pad}>
         <Text style={styles.title}>Mental Health Application</Text>
         <Text style={styles.normalText}>Log In</Text>
@@ -32,44 +35,3 @@ export default function App() {
     </ImageBackground>
   );
 }
-
-let styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    height: undefined,
-    width: undefined,
-    resizeMode: "contain",
-  },
-  pad: {
-    padding: 50,
-  },
-  title: {
-    fontSize: 30,
-    paddingVertical: 20,
-    color: "white",
-    textAlign: "center",
-  },
-  normalText: {
-    fontSize: 20,
-    paddingVertical: 20,
-    color: "white",
-    textAlign: "center",
-  },
-  loginInfo: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    color: "white",
-    borderWidth: 2,
-    borderRadius: 10,
-    borderColor: "white",
-  },
-  input: {
-    flex: 2,
-    color: "white",
-    placeholder: "Email",
-  },
-  confirmBtn: {
-    flex: 1,
-    backgroundColor: "rgba(52, 52, 52, 0.8)",
-  },
-});
