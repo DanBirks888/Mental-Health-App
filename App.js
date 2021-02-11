@@ -15,7 +15,10 @@ export default function App() {
   return (
     <ImageBackground source={piccy.leaves} style={styles.backgroundImage}>
       <View style={styles.pad}>
-        <Text style={styles.title}>Mental Health Application</Text>
+        <Image
+          source={require('./images/dearMe.png')}
+          style={styles.titleLogo}
+        />
         <Image
           source={require('./images/brainLogoBlue.png')}
           style={styles.logo}

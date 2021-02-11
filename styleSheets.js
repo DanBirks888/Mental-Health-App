@@ -5,6 +5,12 @@ export default StyleSheet.create({
     flex: 1,
     resizeMode: 'contain',
   },
+  titleLogo: {
+    height: 100,
+    width: 240,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+  },
   pad: {
     padding: 50,
   },
