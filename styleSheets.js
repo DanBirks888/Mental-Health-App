@@ -29,8 +29,9 @@ export default StyleSheet.create({
     borderColor: "white",
   },
   input: {
-    flex: 2,
+    flex: 1,
     color: "white",
+    marginHorizontal: 20,
   },
   confirmBtn: {
     flex: 1,
