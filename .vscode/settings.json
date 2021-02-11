@@ -4,4 +4,5 @@
   "editor.lineDecorationsWidth": 3,
   "editor.glyphMargin": false,
   "editor.folding": false
+  "prettier.singleQuote": true,
 }
