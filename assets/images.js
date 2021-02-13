@@ -1,5 +1,3 @@
-import { ImageBackground } from 'react-native';
-
 export const piccy = {
   leaves: {
     uri: 'https://graffitiwallpaper.com/pics/listings/191_portrait.jpg',
