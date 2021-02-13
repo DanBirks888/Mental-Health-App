@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  pageContainer: {
+    flex: 1,
+    padding: 50,
+    justifyContent: 'space-evenly',
+  },
   backgroundImage: {
     flex: 1,
     resizeMode: 'contain',
@@ -10,9 +15,6 @@ export default StyleSheet.create({
     width: 240,
     resizeMode: 'contain',
     alignSelf: 'center',
-  },
-  pad: {
-    padding: 50,
   },
   logo: {
     width: 130,
@@ -28,9 +30,9 @@ export default StyleSheet.create({
   },
   normalText: {
     fontSize: 20,
-    paddingVertical: 20,
-    color: 'white',
     textAlign: 'center',
+    lineHeight: 30,
+    color: 'white',
   },
   loginInfo: {
     flexDirection: 'row',
@@ -46,7 +48,7 @@ export default StyleSheet.create({
     flex: 1,
     marginHorizontal: 20,
   },
-  confirmBtn: {
+  buttonStyle: {
     height: 200,
     width: 10,
   },

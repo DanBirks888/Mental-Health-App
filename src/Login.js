@@ -12,16 +12,20 @@ import {
 } from 'react-native';
 
 export default class Login extends React.Component {
-  static navigationOPtions = ({ navigation }) => {
+  static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('name'),
+      header: () => null,
     };
   };
   render() {
     const { navigate, state } = this.props.navigation;
+    // const inputName = useState('');
     return (
-      <ImageBackground source={piccy.leaves} style={styles.backgroundImage}>
-        <View style={styles.pad}>
+      <ImageBackground
+        source={require('../assets/leavesBackground.jpg')}
+        style={styles.backgroundImage}
+      >
+        <View style={styles.pageContainer}>
           <Image
             source={require('../assets/dearMe.png')}
             style={styles.titleLogo}
@@ -31,6 +35,13 @@ export default class Login extends React.Component {
             style={styles.logo}
           />
           <Text style={styles.normalText}>Log In</Text>
+          <View style={styles.loginInfo}>
+            <TextInput
+              placeholder="Name"
+              placeholderTextColor="white"
+              style={styles.input}
+            />
+          </View>
           <View style={styles.loginInfo}>
             <TextInput
               placeholder="Email"
@@ -48,10 +59,11 @@ export default class Login extends React.Component {
           <Button
             title="confirm"
             color={'rgba(1000, 1000, 1000, 0.3)'}
-            styles={styles.confirmBtn}
-            onPress={() => navigate('Home')}
+            styles={styles.buttonStyle}
+            onPress={() => navigate('DataOrCBT')}
           />
         </View>
+        <StatusBar translucent backgroundColor="transparent" Text="white" />
       </ImageBackground>
     );
   }

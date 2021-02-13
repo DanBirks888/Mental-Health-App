@@ -9,10 +9,11 @@ import {
 } from 'react-native';
 import styles from '../assets/styleSheets';
 
-export default class Home extends React.Component {
+export default class DataOrCBT extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
       header: () => null,
+      title: navigation.getParam('name'),
     };
   };
 
@@ -25,23 +26,20 @@ export default class Home extends React.Component {
         style={styles.backgroundImage}
       >
         <View style={styles.pageContainer}>
-          <Image
-            source={require('../assets/dearMe.png')}
-            style={styles.titleLogo}
-          />
-          <Text style={styles.normalText}>
-            Develop your emotional intelligence with heinsight from the most
-            experienced cousellor you know.
-          </Text>
-          <Text style={styles.normalText}>Yourself.</Text>
+          <Text style={styles.title}>Welcome Back</Text>
           <Button
-            title="Begin your journey"
+            title="Document Event"
             color={'rgba(1000, 1000, 1000, 0.3)'}
-            style={styles.buttonStyle}
-            onPress={() => navigate('Login')}
+            styles={styles.buttonStyle}
+            onPress={() => navigate('DataOrCBT')}
+          />
+          <Button
+            title="Emotional Visualisations"
+            color={'rgba(1000, 1000, 1000, 0.3)'}
+            styles={styles.buttonStyle}
+            onPress={() => navigate('DataOrCBT')}
           />
         </View>
-        <StatusBar translucent backgroundColor="transparent" Text="white" />
       </ImageBackground>
     );
   }
