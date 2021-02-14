@@ -12,14 +12,20 @@ import {
 } from 'react-native';
 
 export default class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+    };
+  }
   static navigationOptions = ({ navigation }) => {
     return {
       header: () => null,
     };
   };
+
   render() {
-    const { navigate, state } = this.props.navigation;
-    // const inputName = useState('');
+    const { navigate } = this.props.navigation;
     return (
       <ImageBackground
         source={require('../assets/leavesBackground.jpg')}
@@ -39,6 +45,8 @@ export default class Login extends React.Component {
             <TextInput
               placeholder="Name"
               placeholderTextColor="white"
+              value={this.state.name}
+              onChangeText={(name) => this.setState({ name })}
               style={styles.input}
             />
           </View>
@@ -60,7 +68,7 @@ export default class Login extends React.Component {
             title="confirm"
             color={'rgba(1000, 1000, 1000, 0.3)'}
             styles={styles.buttonStyle}
-            onPress={() => navigate('DataOrCBT')}
+            onPress={() => navigate('DataOrCBT', { user: this.state.name })}
           />
         </View>
         <StatusBar translucent backgroundColor="transparent" Text="white" />

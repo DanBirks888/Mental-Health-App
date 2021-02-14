@@ -13,12 +13,12 @@ export default class DataOrCBT extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
       header: () => null,
-      title: navigation.getParam('name'),
+      title: navigation.getParam('user'),
     };
   };
 
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate, state } = this.props.navigation;
 
     return (
       <ImageBackground
@@ -26,9 +26,9 @@ export default class DataOrCBT extends React.Component {
         style={styles.backgroundImage}
       >
         <View style={styles.pageContainer}>
-          <Text style={styles.title}>Welcome Back</Text>
+          <Text style={styles.title}>Welcome Back {state.params.user}</Text>
           <Button
-            title="Document Event"
+            title="Document a feeling"
             color={'rgba(1000, 1000, 1000, 0.3)'}
             styles={styles.buttonStyle}
             onPress={() => navigate('DataOrCBT')}
