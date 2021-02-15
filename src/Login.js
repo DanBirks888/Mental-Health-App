@@ -16,6 +16,8 @@ export default class Login extends React.Component {
     super(props);
     this.state = {
       name: '',
+      email: '',
+      password: '',
     };
   }
   static navigationOptions = ({ navigation }) => {
@@ -54,6 +56,7 @@ export default class Login extends React.Component {
             <TextInput
               placeholder="Email"
               placeholderTextColor="white"
+              onChangeText={(email) => this.setState({ email })}
               style={styles.input}
             />
           </View>
@@ -61,6 +64,7 @@ export default class Login extends React.Component {
             <TextInput
               placeholder="Password"
               placeholderTextColor="white"
+              onChangeText={(password) => this.setState({ password })}
               style={styles.input}
             />
           </View>

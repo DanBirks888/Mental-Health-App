@@ -6,6 +6,7 @@ import {
   ImageBackground,
   StatusBar,
   Text,
+  TouchableOpacity,
 } from 'react-native';
 import styles from '../assets/styleSheets';
 
@@ -27,18 +28,19 @@ export default class DataOrCBT extends React.Component {
       >
         <View style={styles.pageContainer}>
           <Text style={styles.title}>Welcome Back {state.params.user}</Text>
-          <Button
-            title="Document a feeling"
-            color={'rgba(1000, 1000, 1000, 0.3)'}
-            styles={styles.buttonStyle}
-            onPress={() => navigate('DataOrCBT')}
+
+          <Image
+            source={require('../assets/brainLogo.png')}
+            style={styles.logo}
           />
-          <Button
-            title="Emotional Visualisations"
-            color={'rgba(1000, 1000, 1000, 0.3)'}
-            styles={styles.buttonStyle}
-            onPress={() => navigate('DataOrCBT')}
-          />
+
+          <TouchableOpacity onPress={() => navigate('Feeling')}>
+            <Text style={styles.customBtn}>Document a feeling</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => navigate('DataOrCBT')}>
+            <Text style={styles.customBtn}>Emotional Visualisations</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     );
