@@ -6,6 +6,7 @@ import {
   ImageBackground,
   StatusBar,
   Text,
+  Vibration,
 } from 'react-native';
 import styles from '../assets/styleSheets';
 
@@ -38,7 +39,7 @@ export default class Home extends React.Component {
             title="Begin your journey"
             color={'rgba(1000, 1000, 1000, 0.3)'}
             style={styles.buttonStyle}
-            onPress={() => navigate('Login')}
+            onPress={() => navigate('Login', Vibration.vibrate(1 * 100))}
           />
         </View>
         <StatusBar translucent backgroundColor="transparent" Text="white" />

@@ -4,14 +4,15 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Home from './src/Home';
 import Login from './src/Login';
 import DataOrCBT from './src/DataOrCBT';
-import Feeling from './src/DocumentFeeling/Feeling';
+import CarouselFeelings from './src/DocumentFeeling/CarouselFeelings';
 
 // Create Stack Navigator for set routes
 const Navigator = createStackNavigator({
   Home: { screen: Home },
   Login: { screen: Login },
   DataOrCBT: { screen: DataOrCBT },
-  Feeling: { screen: Feeling },
+  // Feeling: { screen: Feeling },
+  CarouselFeelings: { screen: CarouselFeelings },
 });
 
 const App = createAppContainer(Navigator);

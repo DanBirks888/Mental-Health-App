@@ -7,6 +7,7 @@ import {
   StatusBar,
   Text,
   TouchableOpacity,
+  Vibration,
 } from 'react-native';
 import styles from '../assets/styleSheets';
 
@@ -34,11 +35,19 @@ export default class DataOrCBT extends React.Component {
             style={styles.logo}
           />
 
-          <TouchableOpacity onPress={() => navigate('Feeling')}>
+          <TouchableOpacity
+            onPress={() =>
+              navigate('CarouselFeelings', Vibration.vibrate(1 * 100))
+            }
+          >
             <Text style={styles.customBtn}>Document a feeling</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigate('DataOrCBT')}>
+          <TouchableOpacity
+            onPress={() =>
+              navigate('CarouselFeelings', Vibration.vibrate(1 * 100))
+            }
+          >
             <Text style={styles.customBtn}>Emotional Visualisations</Text>
           </TouchableOpacity>
         </View>

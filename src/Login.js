@@ -9,6 +9,7 @@ import {
   ImageBackground,
   Button,
   StatusBar,
+  Vibration,
 } from 'react-native';
 
 export default class Login extends React.Component {
@@ -72,7 +73,13 @@ export default class Login extends React.Component {
             title="confirm"
             color={'rgba(1000, 1000, 1000, 0.3)'}
             styles={styles.buttonStyle}
-            onPress={() => navigate('DataOrCBT', { user: this.state.name })}
+            onPress={() =>
+              navigate(
+                'DataOrCBT',
+                { user: this.state.name },
+                Vibration.vibrate(1 * 100)
+              )
+            }
           />
         </View>
         <StatusBar translucent backgroundColor="transparent" Text="white" />

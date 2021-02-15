@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Vibration } from 'react-native';
 
 export default StyleSheet.create({
   pageContainer: {
@@ -66,9 +66,33 @@ export default StyleSheet.create({
     borderWidth: 2,
     borderColor: 'grey',
     borderRadius: 10,
+  },
+  customBtnBlack: {
+    color: 'black',
+    fontSize: 20,
+    padding: 15,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    backgroundColor: 'white',
+    borderWidth: 2,
+    borderColor: 'grey',
     borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 28,
   },
   vertButtons: {
-    flexDirection: 'column',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  emotionCarousel: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 50,
   },
 });
