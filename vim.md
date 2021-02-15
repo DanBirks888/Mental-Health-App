@@ -1,7 +1,10 @@
-# Using Vim for better workflow!
+## Using VIM for the First Time
 
-Vim in Visual Studio Code can enhance workflow to remove the requirements of a mouse!
+> Vim has been norotiously crowned as a programming prodicivity booster and was only a matter of time before I got started with it! Better sooner than later!
 
+> To avoid being overwhelmed, I believe this shortcuts are all that is required to get started with VIM if anyone is yet to take the plunge
+
+- Vim in Visual Studio Code can enhance workflow to remove the requirements of a mouse!
 - This project has been built using Vim to adjust to its syntax!
 
 ## Basic Navigation
@@ -25,13 +28,8 @@ Vim in Visual Studio Code can enhance workflow to remove the requirements of a m
 - 'ciw' Replace word
 - 'o' Insert new line below
 - 'cc' Replace line from start
-
-#### Copy & Pasting
-
 - 'dd' Cut line
 - 'num + dd' Cut any amount of lines
 - 'p' Paste on line below current
 - 'P' Before cursor
 - 'w' Start of Word
-
-####
