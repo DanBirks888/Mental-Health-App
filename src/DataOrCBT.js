@@ -36,16 +36,14 @@ export default class DataOrCBT extends React.Component {
           />
 
           <TouchableOpacity
-            onPress={() =>
-              navigate('CarouselFeelings', Vibration.vibrate(1 * 100))
-            }
+            onPress={() => navigate('Feeling', Vibration.vibrate(1 * 100))}
           >
             <Text style={styles.customBtn}>Document a feeling</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             onPress={() =>
-              navigate('CarouselFeelings', Vibration.vibrate(1 * 100))
+              navigate('Visualisations', Vibration.vibrate(1 * 100))
             }
           >
             <Text style={styles.customBtn}>Emotional Visualisations</Text>
